@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TasksWidget</class>
+ <widget class="QWidget" name="TasksWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>760</width>
+    <height>380</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>8</number>
+   </property>
+   <property name="leftMargin">
+    <number>10</number>
+   </property>
+   <property name="topMargin">
+    <number>10</number>
+   </property>
+   <property name="rightMargin">
+    <number>10</number>
+   </property>
+   <property name="bottomMargin">
+    <number>10</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="lblTsdTitle">
+     <property name="text">
+      <string>Мобильный терминал сбора данных (Эмулятор ТСД кладовщика)</string>
+     </property>
+     <property name="styleSheet">
+      <string>font-size: 14px; font-weight: bold; color: #ffffff;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="lblTsdSub">
+     <property name="text">
+      <string>Список активных складских заданий на отбор / перемещение:</string>
+     </property>
+     <property name="styleSheet">
+      <string>color: #cbd5e1; font-weight: bold;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="tblTasks">
+     <column>
+      <property name="text">
+       <string>ID Задачи</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Описание складской задачи</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Товар SKU</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Количество</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Текущий статус</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="grpBoxTSD">
+     <property name="title">
+      <string>Эмулятор терминала ТСД кладовщика</string>
+     </property>
+     <layout class="QVBoxLayout" name="tsdLayout">
+      <property name="spacing">
+       <number>8</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="lblTsdTaskDesc">
+        <property name="text">
+         <string>Выберите задачу в таблице для работы</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="styleSheet">
+         <string>font-size: 11px; color: #e2e8f0; background-color: #1a1a24; border: 1px dashed #4f46e5; border-radius: 6px; padding: 8px;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="tsdButtonsLayout">
+        <property name="spacing">
+         <number>10</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="btnTakeTask">
+          <property name="text">
+           <string>Принять задачу (В работу)</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnScanTask">
+          <property name="text">
+           <string>Сканировать штрихкод товара при отборе</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnExecTask">
+          <property name="text">
+           <string>Подтвердить выполнение задачи</string>
+          </property>
+          <property name="styleSheet">
+           <string>font-weight: bold;</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

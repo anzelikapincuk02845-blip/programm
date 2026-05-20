@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QualityWidget</class>
+ <widget class="QWidget" name="QualityWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>760</width>
+    <height>380</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>12</number>
+   </property>
+   <property name="leftMargin">
+    <number>15</number>
+   </property>
+   <property name="topMargin">
+    <number>15</number>
+   </property>
+   <property name="rightMargin">
+    <number>15</number>
+   </property>
+   <property name="bottomMargin">
+    <number>15</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="lblQualityTitle">
+     <property name="text">
+      <string>Входной и операционный контроль качества продукции</string>
+     </property>
+     <property name="styleSheet">
+      <string>font-size: 14px; font-weight: bold; color: #ffffff;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="selectorLayout">
+     <property name="spacing">
+      <number>10</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="lblChooseLot">
+       <property name="text">
+        <string>Выберите партию товара для проверки:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="cmbLots">
+       <property name="minimumSize">
+        <size>
+         <width>350</width>
+         <height>0</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="grpBoxDetails">
+     <property name="title">
+      <string>Характеристики и текущий статус партии</string>
+     </property>
+     <layout class="QVBoxLayout" name="detailsLayout">
+      <item>
+       <widget class="QLabel" name="lblLotDetails">
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#cbd5e1; font-style:italic;&quot;&gt;Выберите партию из списка для отображения подробностей...&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="textFormat">
+         <enum>Qt::RichText</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnRunTest">
+     <property name="text">
+      <string>Запустить комплексную проверку качества (Симуляция)</string>
+     </property>
+     <property name="styleSheet">
+      <string>font-weight: bold; padding: 6px;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QProgressBar" name="pbarQuality">
+     <property name="value">
+      <number>0</number>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="grpBoxDecision">
+     <property name="title">
+      <string>Вынесение решения по партии</string>
+     </property>
+     <layout class="QHBoxLayout" name="decisionLayout">
+      <property name="spacing">
+       <number>15</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="btnRejectLot">
+        <property name="text">
+         <string>Браковать партию (Блокировка)</string>
+        </property>
+        <property name="styleSheet">
+         <string>font-weight: bold; padding: 8px;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnAcceptLot">
+        <property name="text">
+         <string>Разблокировать партию (Утверждено)</string>
+        </property>
+        <property name="styleSheet">
+         <string>font-weight: bold; padding: 8px;</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

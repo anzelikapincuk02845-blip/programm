@@ -1,0 +1,145 @@
+QMainWindow {
+    background-color: #0f0f12;
+}
+QDialog {
+    background-color: #16161a;
+    color: #ffffff;
+}
+QWidget#centralwidget {
+    background-color: #0f0f12;
+}
+QFrame {
+    border: none;
+}
+/* Стилизация кнопок */
+QPushButton {
+    background-color: #1a1a24;
+    color: #e2e8f0;
+    border: 1px solid #2d2d3d;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 11px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #232333;
+    border-color: #6366f1;
+    color: #ffffff;
+}
+QPushButton:pressed {
+    background-color: #13131c;
+}
+/* Акцентные кнопки */
+QPushButton#btnLogin, QPushButton#btnConfirmRec, QPushButton#btnStartInv, QPushButton#btnVerifyShip, QPushButton#btnExecTask {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #6366f1, stop:1 #4f46e5);
+    color: #ffffff;
+    border: none;
+}
+QPushButton#btnLogin:hover, QPushButton#btnConfirmRec:hover, QPushButton#btnStartInv:hover, QPushButton#btnVerifyShip:hover, QPushButton#btnExecTask:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #4f46e5, stop:1 #4338ca);
+}
+QPushButton#btnQualityReject {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #ef4444, stop:1 #dc2626);
+    color: #ffffff;
+    border: none;
+}
+QPushButton#btnQualityReject:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #dc2626, stop:1 #b91c1c);
+}
+QPushButton#btnQualityAccept {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #10b981, stop:1 #059669);
+    color: #ffffff;
+    border: none;
+}
+QPushButton#btnQualityAccept:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #059669, stop:1 #047857);
+}
+/* Стилизация текстовых полей */
+QLineEdit {
+    background-color: #161622;
+    color: #ffffff;
+    border: 1px solid #2d2d3d;
+    border-radius: 6px;
+    padding: 6px;
+    font-size: 12px;
+}
+QLineEdit:focus {
+    border-color: #6366f1;
+}
+/* Стилизация выпадающих списков */
+QComboBox {
+    background-color: #161622;
+    color: #ffffff;
+    border: 1px solid #2d2d3d;
+    border-radius: 6px;
+    padding: 5px;
+    font-size: 11px;
+}
+QComboBox:focus {
+    border-color: #6366f1;
+}
+QComboBox QAbstractItemView {
+    background-color: #161622;
+    color: #ffffff;
+    selection-background-color: #4f46e5;
+}
+/* Стилизация таблиц */
+QTableWidget {
+    background-color: #161622;
+    color: #e2e8f0;
+    gridline-color: #2a2a35;
+    border: 1px solid #2d2d3d;
+    border-radius: 8px;
+    font-size: 11px;
+}
+QTableWidget::item {
+    padding: 4px;
+}
+QHeaderView::section {
+    background-color: #1f1f2e;
+    color: #ffffff;
+    border: 1px solid #2a2a35;
+    font-weight: bold;
+    padding: 4px;
+}
+QTableWidget::item:selected {
+    background-color: #3b3b4f;
+    color: #ffffff;
+}
+/* Текстовые логи */
+QTextEdit {
+    background-color: #161622;
+    color: #e2e8f0;
+    border: 1px solid #2d2d3d;
+    border-radius: 8px;
+    font-family: "Consolas", monospace;
+    font-size: 11px;
+    padding: 8px;
+}
+/* Индикатор выполнения */
+QProgressBar {
+    border: 1px solid #2d2d3d;
+    border-radius: 6px;
+    text-align: center;
+    background-color: #161622;
+    color: #ffffff;
+    font-weight: bold;
+}
+QProgressBar::chunk {
+    background-color: #6366f1;
+    border-radius: 5px;
+}
+/* Панели группировки */
+QGroupBox {
+    color: #818cf8;
+    font-weight: bold;
+    border: 1px solid #2d2d3d;
+    border-radius: 8px;
+    margin-top: 12px;
+    padding-top: 12px;
+}
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 5px;
+}

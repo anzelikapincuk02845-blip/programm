@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ReceivingWidget</class>
+ <widget class="QWidget" name="ReceivingWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>760</width>
+    <height>380</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>8</number>
+   </property>
+   <property name="leftMargin">
+    <number>10</number>
+   </property>
+   <property name="topMargin">
+    <number>10</number>
+   </property>
+   <property name="rightMargin">
+    <number>10</number>
+   </property>
+   <property name="bottomMargin">
+    <number>10</number>
+   </property>
+   <item>
+    <layout class="QHBoxLayout" name="headerLayout">
+     <item>
+      <widget class="QPushButton" name="btnCreateDoc">
+       <property name="text">
+        <string>Создать документ "Приемка товара"</string>
+       </property>
+       <property name="styleSheet">
+        <string>font-weight: bold;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lblDocNumber">
+       <property name="text">
+        <string>Акт приемки: не создан</string>
+       </property>
+       <property name="styleSheet">
+        <string>color: #e2e8f0; font-weight: bold; font-size: 11px;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="grpBoxForm">
+     <property name="title">
+      <string>Параметры принимаемой продукции</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <property name="horizontalSpacing">
+       <number>15</number>
+      </property>
+      <property name="verticalSpacing">
+       <number>10</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="lblSku">
+        <property name="text">
+         <string>Сканирование штрихкода (SKU):</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="txtSku">
+        <property name="placeholderText">
+         <string>Введите артикул (например, 11111 или 66666)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="lblQty">
+        <property name="text">
+         <string>Ввод количества товара (шт):</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="txtQty">
+        <property name="placeholderText">
+         <string>Введите количество (например, 50)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="lblLot">
+        <property name="text">
+         <string>Номер партии товара:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="txtLot">
+        <property name="placeholderText">
+         <string>Автогенерация или ручной ввод (например, LOT-XYZ)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="lblLoc">
+        <property name="text">
+         <string>Зона приемки (ячейка склада):</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLineEdit" name="txtLoc">
+        <property name="placeholderText">
+         <string>Введите ячейку размещения (например, A1-03)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="lblNewName">
+        <property name="text">
+         <string>Название товара (для новой номенклатуры):</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLineEdit" name="txtNewName">
+        <property name="placeholderText">
+         <string>Заполнять только если штрихкод новый в системе</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="lblAssocStatus">
+     <property name="text">
+      <string>Ассоциация: Ожидание ввода штрихкода...</string>
+     </property>
+     <property name="styleSheet">
+      <string>color: #cbd5e1; font-style: italic;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnConfirm">
+     <property name="text">
+      <string>Разместить в зону приемки и подтвердить приемку</string>
+     </property>
+     <property name="styleSheet">
+      <string>font-weight: bold; padding: 8px;</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ShippingWidget</class>
+ <widget class="QWidget" name="ShippingWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>760</width>
+    <height>380</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>10</number>
+   </property>
+   <property name="leftMargin">
+    <number>12</number>
+   </property>
+   <property name="topMargin">
+    <number>12</number>
+   </property>
+   <property name="rightMargin">
+    <number>12</number>
+   </property>
+   <property name="bottomMargin">
+    <number>12</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="lblShippingTitle">
+     <property name="text">
+      <string>Оформление и планирование отгрузки продукции со склада</string>
+     </property>
+     <property name="styleSheet">
+      <string>font-size: 14px; font-weight: bold; color: #ffffff;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="grpBoxOutbound">
+     <property name="title">
+      <string>Выбор продукции и объемов</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <property name="horizontalSpacing">
+       <number>15</number>
+      </property>
+      <property name="verticalSpacing">
+       <number>10</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QLabel" name="lblSelectShip">
+        <property name="text">
+         <string>Товар для отгрузки:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="cmbShipProducts">
+        <property name="minimumSize">
+         <size>
+          <width>300</width>
+          <height>0</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="lblStockText">
+        <property name="text">
+         <string>Доступные складские запасы:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="lblStockInfo">
+        <property name="text">
+         <string>Выберите товар для отображения остатка</string>
+        </property>
+        <property name="styleSheet">
+         <string>font-weight: bold; color: #6366f1;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="lblShipQtyText">
+        <property name="text">
+         <string>Требуемое количество (шт):</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="txtShipQty">
+        <property name="placeholderText">
+         <string>Введите количество для списания/отбора</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnVerify">
+     <property name="text">
+      <string>Проверить доступность товара (Проверка наличия и качества)</string>
+     </property>
+     <property name="styleSheet">
+      <string>font-weight: bold; padding: 6px;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="grpBoxOps">
+     <property name="title">
+      <string>Доступные операции отгрузки</string>
+     </property>
+     <layout class="QVBoxLayout" name="opsLayout">
+      <property name="spacing">
+       <number>8</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="lblShipStatus">
+        <property name="text">
+         <string>Статус проверки: Ожидание ввода данных...</string>
+        </property>
+        <property name="styleSheet">
+         <string>color: #cbd5e1; font-style: italic;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="shipButtonsLayout">
+        <property name="spacing">
+         <number>15</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="btnCreatePickTask">
+          <property name="text">
+           <string>Сформировать задачу на отбор (для ТСД кладовщика)</string>
+          </property>
+          <property name="styleSheet">
+           <string>font-weight: bold; padding: 8px;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnShipInstant">
+          <property name="text">
+           <string>Прямая отгрузка со склада (Автосписание)</string>
+          </property>
+          <property name="styleSheet">
+           <string>font-weight: bold; padding: 8px;</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

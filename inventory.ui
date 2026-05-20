@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>InventoryWidget</class>
+ <widget class="QWidget" name="InventoryWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>760</width>
+    <height>380</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>8</number>
+   </property>
+   <property name="leftMargin">
+    <number>10</number>
+   </property>
+   <property name="topMargin">
+    <number>10</number>
+   </property>
+   <property name="rightMargin">
+    <number>10</number>
+   </property>
+   <property name="bottomMargin">
+    <number>10</number>
+   </property>
+   <item>
+    <layout class="QHBoxLayout" name="topLayout">
+     <item>
+      <widget class="QPushButton" name="btnStartCount">
+       <property name="text">
+        <string>Запланировать проведение инвентаризации</string>
+       </property>
+       <property name="styleSheet">
+        <string>font-weight: bold;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lblInvStatus">
+       <property name="text">
+        <string>Инвентаризация: Ожидание запуска</string>
+       </property>
+       <property name="styleSheet">
+        <string>color: #e2e8f0; font-weight: bold;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="grpBoxProc">
+     <property name="title">
+      <string>Процесс пересчета (Выбор номенклатуры и ввод факта)</string>
+     </property>
+     <layout class="QHBoxLayout" name="countLayout">
+      <property name="spacing">
+       <number>10</number>
+      </property>
+      <item>
+       <layout class="QFormLayout" name="formLayout">
+        <property name="verticalSpacing">
+         <number>8</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QLabel" name="lblSelectProd">
+          <property name="text">
+           <string>Товар для пересчета:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="cmbProducts"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="lblExpectedText">
+          <property name="text">
+           <string>Ожидаемое кол-во:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLabel" name="lblExpectedQty">
+          <property name="text">
+           <string>0</string>
+          </property>
+          <property name="styleSheet">
+           <string>font-weight: bold; font-size: 12px; color: #6366f1;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="lblActualText">
+          <property name="text">
+           <string>Фактическое кол-во:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="txtActualQty">
+          <property name="placeholderText">
+           <string>Введите факт</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QPushButton" name="btnSaveCount">
+          <property name="text">
+           <string>Внести фактические данные</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="tblInventory">
+        <column>
+         <property name="text">
+          <string>Артикул</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Наименование</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Учет</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Факт</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Разница</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="lblResultMsg">
+     <property name="text">
+      <string>Ожидание завершения пересчета позиций...</string>
+     </property>
+     <property name="styleSheet">
+      <string>color: #cbd5e1; font-style: italic;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="bottomButtons">
+     <item>
+      <widget class="QPushButton" name="btnDiscrepancy">
+       <property name="text">
+        <string>Сформировать Акт о расхождениях</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnFinishCount">
+       <property name="text">
+        <string>Завершить инвентаризацию и скорректировать остатки</string>
+       </property>
+       <property name="styleSheet">
+        <string>font-weight: bold;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DashboardWidget</class>
+ <widget class="QWidget" name="DashboardWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>760</width>
+    <height>380</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <property name="spacing">
+    <number>15</number>
+   </property>
+   <property name="leftMargin">
+    <number>15</number>
+   </property>
+   <property name="topMargin">
+    <number>15</number>
+   </property>
+   <property name="rightMargin">
+    <number>15</number>
+   </property>
+   <property name="bottomMargin">
+    <number>15</number>
+   </property>
+   <item>
+    <layout class="QVBoxLayout" name="leftLayout">
+     <property name="spacing">
+      <number>10</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="lblDashboardTitle">
+       <property name="text">
+        <string>Панель мониторинга склада</string>
+       </property>
+       <property name="styleSheet">
+        <string>font-size: 14px; font-weight: bold; color: #ffffff;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="grpBoxStats">
+       <property name="title">
+        <string>Складские показатели</string>
+       </property>
+       <layout class="QVBoxLayout" name="statsLayout">
+        <property name="spacing">
+         <number>8</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="lblStatTotal">
+          <property name="text">
+           <string>Всего товаров на складе: 0 шт.</string>
+          </property>
+          <property name="styleSheet">
+           <string>font-size: 12px; color: #cbd5e1;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblStatSku">
+          <property name="text">
+           <string>Уникальных артикулов (SKU): 0</string>
+          </property>
+          <property name="styleSheet">
+           <string>font-size: 12px; color: #cbd5e1;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblStatBlocked">
+          <property name="text">
+           <string>Заблокировано (брак): 0 шт.</string>
+          </property>
+          <property name="styleSheet">
+           <string>font-size: 12px; color: #cbd5e1;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblStatTasks">
+          <property name="text">
+           <string>Активных задач ТСД: 0</string>
+          </property>
+          <property name="styleSheet">
+           <string>font-size: 12px; color: #cbd5e1;</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnRefresh">
+       <property name="text">
+        <string>Обновить данные</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="rightLayout">
+     <item>
+      <widget class="QLabel" name="lblLogTitle">
+       <property name="text">
+        <string>Журнал операций (последние события):</string>
+       </property>
+       <property name="styleSheet">
+        <string>color: #cbd5e1; font-weight: bold;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextEdit" name="logView">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
